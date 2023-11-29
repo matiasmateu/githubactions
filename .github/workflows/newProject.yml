@@ -18,11 +18,10 @@ jobs:
         - uses: actions/setup-go@v1
           with:
             go-version: '1.14.6'
-        - run: cd src && go mod vendor
+        - run: go mod vendor
         - name: create-json
           id: create-json
           uses: jsdaniell/create-json@v1.2.2
           with:
             name: "renative.json"
             json: ${{ secrets.SECRETS_TEST }}
-            dir: "src/"
