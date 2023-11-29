@@ -1,15 +1,17 @@
-name: Creating new Flavour.
+name: Create new project.
 
 on:
   workflow_dispatch:
     inputs:
-        enviroment:
-            description: 'The enviroment to deploy to'
+        projectName:
             required: true
-            default: 'production'
+            default: 'Project X'
+        projectCode:
+            required: true
+            default: 'prj-x-rn'
 
 jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-            - run: echo "Deploying to ${{ github.event.inputs.enviroment }}"
+            - run: echo "Creating project ${{ github.event.inputs.projectName }} with code ${{ github.event.inputs.projectCode }}"
