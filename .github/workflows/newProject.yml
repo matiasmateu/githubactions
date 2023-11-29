@@ -14,4 +14,5 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-            - run: echo "Creating project ${{ github.event.inputs.projectName }} with project ID ${{ github.event.inputs.projectCode}}""
+            - run: echo "Creating project ${{ github.event.inputs.projectName }} with project ID ${{ github.event.inputs.projectCode}}"
+              shell: bash
