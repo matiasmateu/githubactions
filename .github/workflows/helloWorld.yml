@@ -13,10 +13,6 @@ jobs:
     hello:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
-    goodbye:
-        runs-on: ubuntu-latest
-        steps:
-            - name: goodbye world
+            - name: hello world
               run: echo "Hello World"
               shell: bash
